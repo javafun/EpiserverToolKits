@@ -432,3 +432,13 @@ $RECYCLE.BIN/
 !.vscode/launch.json
 !.vscode/extensions.json
 
+# NCrunch
+*.ncrunch*
+_NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
+.ncrunchproject*
+
+# ---- SonarQube
+.sonar/
+.scannerwork/
