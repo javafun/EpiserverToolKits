@@ -1,4 +1,4 @@
-# EpiserverToolKits
+# EpiserverToolKits.DatabaseMaintenanceJob
 
 [![NuGet](https://img.shields.io/nuget/v/EpiserverToolKits.DatabaseMaintenanceJob.svg?style=flat-square)](https://www.nuget.org/packages/EpiserverToolKits.DatabaseMaintenanceJob/)[![NuGet](https://img.shields.io/nuget/dt/EpiserverToolKits.DatabaseMaintenanceJob.svg?style=flat-square)](https://www.nuget.org/packages/EpiserverToolKits.DatabaseMaintenanceJob/)
 
@@ -16,6 +16,33 @@ Install-Package EpiserverToolKits.DatabaseMaintenanceJob
 
 ## Configuration
 
+You can control the index optimization threshold and databases you do not want to run index optimization with the following options in the web.config under `appsettings` section.
+
+| Appsetting Name  | Description  |
+|---|---|
+| lowFragmentationThreshold  | Database re-organize index threshold. **Default value is 10** |
+| highFragmentationThreshold | Database rebuild index threshold. **Default value is 30**   |
+| excludedDatabases  |  List of databases exclude from index re-organize / rebuild |
+
+## Test/ Build / Release
+
+Clone the repository and build solution with `dotnet cli` 
+
+Build in release mode:
+```
+dotnet build -c Release /p:Version=<version>
+```
+
+Create package
+```
+dotnet pack --no-build -c Release /p:PackageVersion=<version>
+```
+
+Run unit test
+
+```
+dotnet test
+```
 
 ## License
 
