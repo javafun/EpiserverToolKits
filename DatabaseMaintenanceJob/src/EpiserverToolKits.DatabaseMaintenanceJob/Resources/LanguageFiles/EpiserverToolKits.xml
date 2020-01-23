@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<languages>
+  <language name="English" id="en">    
+    <scheduledjobs>      
+      <maintaindatabaseindexjob>
+        <displayname>[EpiserverToolkits] - Database Index Maintenance Job</displayname>
+        <successmessage>Processed all indexes in the &lt;strong&gt;{0}&lt;/strong&gt; database</successmessage>  
+      </maintaindatabaseindexjob>
+    </scheduledjobs>
+  </language>
+</languages>
