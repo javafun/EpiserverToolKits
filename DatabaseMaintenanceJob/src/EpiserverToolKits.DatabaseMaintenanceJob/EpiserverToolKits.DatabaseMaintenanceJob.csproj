@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
-    <Authors>javafun</Authors>
+    <Authors>Vincent Yang</Authors>
+    <Owner
 
     <RepositoryUrl>https://github.com/javafun/EpiserverToolkits</RepositoryUrl>
     <PackageDescription>This package includes a Episerver schedule job for reorganizing and rebuilding SQL database index. This package can be installed on CMS or Commerce project.</PackageDescription>

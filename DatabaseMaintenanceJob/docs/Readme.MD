@@ -1,6 +1,6 @@
 # EpiserverToolKits.DatabaseMaintenanceJob
 
-[![NuGet](https://img.shields.io/nuget/v/EpiserverToolKits.DatabaseMaintenanceJob.svg?style=flat-square)](https://www.nuget.org/packages/EpiserverToolKits.DatabaseMaintenanceJob/)[![NuGet](https://img.shields.io/nuget/dt/EpiserverToolKits.DatabaseMaintenanceJob.svg?style=flat-square)](https://www.nuget.org/packages/EpiserverToolKits.DatabaseMaintenanceJob/)
+[![NuGet](https://img.shields.io/nuget/v/DatabaseMaintenanceJob.svg?style=flat-square)](https://www.nuget.org/packages/DatabaseMaintenanceJob/)[![NuGet](https://img.shields.io/nuget/dt/DatabaseMaintenanceJob.svg?style=flat-square)](https://www.nuget.org/packages/EpiserverToolKits.DatabaseMaintenanceJob/)
 
 [![Build status](https://ci.appveyor.com/api/projects/status/1i9fmoptbpus8p65?svg=true)](https://ci.appveyor.com/project/javafun/episervertoolkits)
 
