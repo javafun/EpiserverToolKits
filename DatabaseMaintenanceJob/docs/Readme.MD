@@ -11,8 +11,10 @@
 ## NuGet
 
 ```
-Install-Package EpiserverToolKits.DatabaseMaintenanceJob
+PM> Install-Package Install-Package DatabaseMaintenanceJob
 ```
+## Why need another database maintenance job?
+Apparently, Episerver only provides database index maintenance job when you have Commerce installed, there is no way to use the job only in CMS project. 
 
 ## Configuration
 
