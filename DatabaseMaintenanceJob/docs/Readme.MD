@@ -7,13 +7,12 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=javafun_EpiserverToolKits&metric=alert_status)](https://sonarcloud.io/dashboard?id=javafun_EpiserverToolKits)
 
 
-
 ## NuGet
 
 ```
 PM> Install-Package Install-Package DatabaseMaintenanceJob
 ```
-## Why need another database maintenance job?
+## Why do I need another database maintenance job?
 Apparently, Episerver only provides database index maintenance job when you have Commerce installed, there is no way to use the job only in CMS project. 
 
 ## Configuration
