@@ -15,6 +15,17 @@ PM> Install-Package DatabaseMaintenanceJob
 ## Why do I need another database maintenance job?
 Apparently, Episerver only provides database index maintenance job when you have Commerce installed, there is no way to use the job only in CMS project. 
 
+
+# How to use
+
+Once the package has been installed to your site, you'll find `[EpiserverToolkits] Database Index Maintenance Job` at the bottom of Scheduled Jobs section.
+
+<img src="images/schedulejob-1.png" width="600" style="display:block"/>
+
+
+<img src="images/schedulejob-2.png" width="600" style="display:block"/>
+
+
 ## Configuration
 
 You can control the index optimization threshold and databases you do not want to run index optimization with the following options in the web.config under `appsettings` section.
@@ -23,7 +34,7 @@ You can control the index optimization threshold and databases you do not want t
 |---|---|
 | lowFragmentationThreshold  | Database re-organize index threshold. **Default value is 10** |
 | highFragmentationThreshold | Database rebuild index threshold. **Default value is 30**   |
-| excludedDatabases  |  List of databases exclude from index re-organize / rebuild |
+| excludedDatabases  | List of databases exclude from index re-organize / rebuild. By default the job will rebuild/re-organize all databases listed under connectionstrings section. |
 
 ## Test/ Build / Release
 
