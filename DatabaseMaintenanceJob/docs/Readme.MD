@@ -34,7 +34,7 @@ You can control the index optimization threshold and databases you do not want t
 |---|---|
 | lowFragmentationThreshold  | Database re-organize index threshold. **Default value is 10** |
 | highFragmentationThreshold | Database rebuild index threshold. **Default value is 30**   |
-| excludedDatabases  | List of databases exclude from index re-organize / rebuild. By default the job will rebuild/re-organize all databases listed under connectionstrings section. |
+| excludedDatabases  | List of databases to be excluded from index re-organize / rebuild. By default the job will rebuild/re-organize all databases listed under connectionstrings section. |
 
 ## Test/ Build / Release
 
