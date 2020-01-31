@@ -13,7 +13,8 @@
 PM> Install-Package DatabaseMaintenanceJob
 ```
 ## Why do I need another database maintenance job?
-Apparently, Episerver only provides database index maintenance job when you have Commerce installed, there is no way to use the job only in CMS project. 
+Apparently, Episerver only provides database index maintenance job when you have Commerce installed, there is no way to use that in CMS project. 
+
 
 
 # How to use
