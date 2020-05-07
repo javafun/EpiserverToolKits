@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <Authors>Vincent Yang</Authors>
+    <RepositoryUrl></RepositoryUrl>
+    <PackageDescription>This package includes a quick handy middleware for creating admin user in CMS with default membership provider. This package should be installed on CMS only.</PackageDescription>
+    <Copyright>Copyright 2020 Vincent Yang</Copyright>
+    <Company></Company>
+    <PackageTags>Membership</PackageTags>
+    <Product>EpiserverToolKits.MembershipAdminUserMiddleware</Product>
+    <PackageId>MembershipAdminUserMiddleware</PackageId>    
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Owin" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+
+</Project>
