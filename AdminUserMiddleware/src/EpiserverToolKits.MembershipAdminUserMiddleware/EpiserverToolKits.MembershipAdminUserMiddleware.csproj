@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
     <Authors>Vincent Yang</Authors>
-    <RepositoryUrl></RepositoryUrl>
+    <RepositoryUrl>https://github.com/javafun/EpiserverToolKits/tree/master/AdminUserMiddleware</RepositoryUrl>
     <PackageDescription>This package includes a quick handy middleware for creating admin user in CMS with default membership provider. This package should be installed on CMS only.</PackageDescription>
     <Copyright>Copyright 2020 Vincent Yang</Copyright>
     <Company></Company>
