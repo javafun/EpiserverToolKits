@@ -13,7 +13,6 @@ namespace EpiserverToolKits.MembershipAdminUserMiddleware
         private readonly AdminUser _adminUser;
 
         private static readonly string[] _roles = { "WebAdmins", "WebEditors", "Administrators" };
-        public static bool hasCreated = false;
         private static bool _userCreated = false;
         private Lazy<bool> _createUser = new Lazy<bool>(() => false);
 

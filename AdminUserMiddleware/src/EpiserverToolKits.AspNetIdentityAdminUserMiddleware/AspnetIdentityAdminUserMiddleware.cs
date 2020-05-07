@@ -14,10 +14,8 @@ namespace EpiserverToolKits.AspNetIdentityAdminUserMiddleware
     {
         private readonly AppFunc _next;
         private readonly AdminUser _adminUser;
-
         private static readonly string[] _roles = { "WebAdmins", "WebEditors", "Administrators" };
-        public static bool hasCreated = false;
-
+        private static bool _userCreated = false;
         private static Lazy<bool> _createUser = new Lazy<bool>(() => false);
 
         public AspnetIdentityAdminUserMiddleware(AppFunc next, AdminUser adminUser)
@@ -30,13 +28,15 @@ namespace EpiserverToolKits.AspNetIdentityAdminUserMiddleware
 
         public async Task Invoke(IDictionary<string, object> environment)
         {
-            if (!_createUser.Value)
+            if (!_createUser.Value && !_userCreated)
             {
                 using (UserStore<ApplicationUser> store = new UserStore<ApplicationUser>(new ApplicationDbContext<ApplicationUser>("EPiServerDB")))
                 {
                     var createdUser = CreateUser(store, _adminUser.Username, _adminUser.Password, _adminUser.Email);
                     AddUserToRoles(store, createdUser, _roles);
                     await store.UpdateAsync(createdUser);
+
+                    _userCreated = true;
                 }
             }
 
@@ -46,16 +46,24 @@ namespace EpiserverToolKits.AspNetIdentityAdminUserMiddleware
 
         private bool HasUserAlreadyExisted()
         {
+            if (_userCreated)
+                return _userCreated;
+
             using (UserStore<ApplicationUser> store = new UserStore<ApplicationUser>(new ApplicationDbContext<ApplicationUser>("EPiServerDB")))
             {
                 //If there's already a user, then we don't need a seed
                 if (!store.Users.Any(x => x.UserName == _adminUser.Username))
                 {
-                    return false;
+                    _userCreated = false;
                 }
+                else
+                {
+                    _userCreated = true;
+                }
+                
             }
 
-            return true;
+            return _userCreated;
         }
 
         private ApplicationUser CreateUser(UserStore<ApplicationUser> store, string username, string password, string email)
