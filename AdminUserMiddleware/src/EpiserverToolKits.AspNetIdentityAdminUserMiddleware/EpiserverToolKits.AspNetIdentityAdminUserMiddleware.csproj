@@ -9,6 +9,8 @@
     <PackageTags>AspNetIdentity</PackageTags>
     <Product>EpiserverToolKits.AspNetIdentityAdminUserMiddleware</Product>
     <PackageId>AspNetIdentityAdminUserMiddleware</PackageId>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
   </PropertyGroup>
 
   <ItemGroup>

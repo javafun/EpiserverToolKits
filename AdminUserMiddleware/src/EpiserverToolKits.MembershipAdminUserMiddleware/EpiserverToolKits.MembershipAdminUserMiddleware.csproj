@@ -9,7 +9,8 @@
     <Company></Company>
     <PackageTags>Membership</PackageTags>
     <Product>EpiserverToolKits.MembershipAdminUserMiddleware</Product>
-    <PackageId>MembershipAdminUserMiddleware</PackageId>    
+    <PackageId>MembershipAdminUserMiddleware</PackageId>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
