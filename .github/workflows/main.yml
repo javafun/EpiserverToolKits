@@ -22,11 +22,16 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    - name: Setup MSBuild Path
-      uses: warrenbuckley/Setup-MSBuild@v1
+    - name: setup-msbuild
+      uses: microsoft/setup-msbuild@v1
 
-    - name: Setup Nuget
-      uses: warrenbuckley/Setup-Nuget@v1
+    - name: Setup NuGet.exe for use with actions
+      uses: NuGet/setup-nuget@v1.0.2
 
+    - name: Install dependencies
+      run: dotnet restore
+      working-directory: Extensions/src
+      
     - name: Build Extension Project
-      run: msbuild Extensions/src/Extensions.sln /p:Configuration=Release /p:Platform="Any CPU"
+      run: msbuild Extensions.sln /p:Configuration=Release /p:Platform="Any CPU"
+      working-directory: Extensions/src
